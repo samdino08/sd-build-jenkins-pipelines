@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">My Website</a>
+    <nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Deployed automatically by Jenkins</h1>
+      <p>This page was built and shipped from Git. Edit a file, push to <code>main</code>, and the pipeline updates the server.</p>
+      <button id="stamp-btn" type="button">Show page load time</button>
+      <p id="stamp" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> My Website</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
