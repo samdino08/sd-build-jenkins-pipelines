@@ -9,7 +9,7 @@ pipeline {
 
     environment {
         // ---- EDIT THESE ----
-        DEPLOY_HOST = 'deploy@your-server-ip'   // user@host of the web server
+        DEPLOY_HOST = 'ec2-user@99.79.52.211'   // user@host of the web server
         DEPLOY_PATH = '/var/www/html'            // web root on the server
         SSH_CRED_ID = 'deploy-server-ssh'        // Jenkins credential ID (SSH private key)
     }
