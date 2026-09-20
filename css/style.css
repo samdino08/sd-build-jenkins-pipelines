@@ -1,19 +1,10 @@
 :root {
-  --bg: #f7f8fa;
-  --text: #1c2430;
-  --muted: #5b6675;
-  --accent: #1f5fbf;
-  --border: #dde2e9;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #12161c;
-    --text: #e8ecf1;
-    --muted: #9aa5b4;
-    --accent: #6ea3f2;
-    --border: #2a323d;
-  }
+  --bg: #0b1f4b;          /* navy blue */
+  --bg-card: #102a63;
+  --text: #f1f5ff;
+  --muted: #a9b8d9;
+  --accent: #ffc233;
+  --border: #23407f;
 }
 
 * { box-sizing: border-box; }
@@ -49,25 +40,37 @@ nav a:hover, nav a[aria-current="page"] { color: var(--accent); }
 main { flex: 1; }
 
 .hero {
-  max-width: 40rem;
+  max-width: 44rem;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 3.5rem 1.5rem 2rem;
+  text-align: center;
 }
-.hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.2; margin: 0 0 1rem; }
-.hero p { color: var(--muted); }
+.hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); line-height: 1.2; margin: 0 0 1rem; }
+.hero p { color: var(--muted); margin: 0; }
+
+/* Three bikes: one row on wide screens, stacked on phones */
+.bikes {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+}
+
+.bike {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+.bike-art { display: block; width: 100%; height: auto; aspect-ratio: 300 / 160; }
+.bike h2 { margin: 0.75rem 0 0.25rem; font-size: 1.25rem; }
+.bike p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
 code { background: var(--border); padding: 0.1em 0.4em; border-radius: 4px; }
 
-button {
-  font: inherit;
-  padding: 0.6rem 1.1rem;
-  border: 0;
-  border-radius: 6px;
-  background: var(--accent);
-  color: #fff;
-  cursor: pointer;
-}
-button:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
 .site-footer {
   padding: 1rem 1.5rem;
