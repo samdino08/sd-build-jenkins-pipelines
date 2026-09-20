@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your cart - Carl's site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Carl's site</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="cart.html" aria-current="page">Cart (<span class="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Your cart</h1>
+
+      <div id="cart-empty" class="empty">
+        <p>Your cart is empty.</p>
+        <a class="btn" href="shop.html">Browse the shop</a>
+      </div>
+
+      <div id="cart-content" hidden>
+        <ul class="cart-list" id="cart-items"></ul>
+        <p class="subtotal">Subtotal: <strong id="cart-total">$0.00</strong></p>
+
+        <h2 id="checkout">Checkout: send your order request</h2>
+        <p class="hint">No payment is taken on this site. Carl will reply to confirm shipping, payment and delivery.</p>
+
+        <form id="order-form" class="order-form">
+          <label>Full name
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>Email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>Phone
+            <input name="phone" type="tel" autocomplete="tel" required>
+          </label>
+          <label>Delivery address
+            <textarea name="address" rows="3" autocomplete="street-address" required></textarea>
+          </label>
+          <label>Notes (optional)
+            <textarea name="notes" rows="2"></textarea>
+          </label>
+          <button type="submit" class="btn btn-big">Send order request</button>
+        </form>
+      </div>
+
+      <p id="order-status" class="status" role="status" hidden></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Carl's site. Prices are in dollars; shipping and tax are confirmed when Carl replies to your order request.</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -3,30 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to Carl's site - 8 Ball Pool Accessories</title>
+  <title>Shop - Carl's site</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="index.html">Carl's site</a>
     <nav aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="shop.html">Shop</a>
+      <a href="index.html">Home</a>
+      <a href="shop.html" aria-current="page">Shop</a>
       <a href="cart.html">Cart (<span class="cart-count">0</span>)</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Welcome to Carl's site</h1>
-      <p>Everything you need for 8 ball pool: cues, chalk, balls, racks, cases and more. Add what you like to your cart and send an order request in a minute.</p>
-      <a class="btn btn-big" href="shop.html">Shop all accessories</a>
-    </section>
-
     <section class="section">
-      <h2>Popular picks</h2>
-      <div class="product-grid" id="featured"></div>
-      <p class="more"><a href="shop.html">See everything in the shop</a></p>
+      <h1>Shop 8 ball pool accessories</h1>
+      <div class="filters" id="filters" aria-label="Filter by category"></div>
+      <div class="product-grid" id="product-grid"></div>
     </section>
   </main>
 
